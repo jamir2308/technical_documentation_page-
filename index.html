@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <header>Documentacion python</header>
+            <div id="ul-nav">
+                <li><a class="nav-link" href="#introduccion">Introduccion</a></li>
+                <li><a class="nav-link" href="#hello_world">Hello World</a></li>
+                <li><a class="nav-link" href="#tipos_basicos">Tipos Basicos</a></li>
+                <li><a class="nav-link" href="#operadores">Operadores</a></li>
+                <li><a class="nav-link" href="#cadenas">Cadenas</a></li>
+                <li><a class="nav-link" href="#booleanos">Booleanos</a></li>
+            </div>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="introduccion" class="main-section">
+            <header>Introduccion</header>
+            <p>Python es un lenguaje de programación creado por Guido van Rossum
+                a principios de los años 90 cuyo nombre está inspirado en el grupo de
+                cómicos ingleses “Monty Python”. Es un lenguaje similar a Perl, pero
+                con una sintaxis muy limpia y que favorece un código legible.</p>
+            <p>Se trata de un lenguaje interpretado o de script, con tipado dinámico,
+                fuertemente tipado, multiplataforma y orientado a objetos.</p>
+            <h3>Lenguaje interpretado o de script</h3>
+            <p>Un lenguaje interpretado o de script es aquel que se ejecuta utilizando
+                un programa intermedio llamado intérprete, en lugar de compilar el
+                código a lenguaje máquina que pueda comprender y ejecutar directamente una computadora (lenguajes
+                compilados).</p>
+            <p>La ventaja de los lenguajes compilados es que su ejecución es más
+                rápida. Sin embargo los lenguajes interpretados son más flexibles y más
+                portables.</p>
+            <p>Python tiene, no obstante, muchas de las características de los lenguajes compilados, por lo que se
+                podría decir que es
+                semi interpretado. En
+                Python, como en Java y muchos otros lenguajes, el código fuente se
+                traduce a un pseudo código máquina intermedio llamado bytecode la
+                primera vez que se ejecuta, generando archivos .pyc o .pyo (bytecode
+                optimizado), que son los que se ejecutarán en sucesivas ocasiones.</p>
+            <h3>Tipado dinámico</h3>
+            <p>La característica de tipado dinámico se refiere a que no es necesario
+                declarar el tipo de dato que va a contener una determinada variable,
+                Python para todos
+                8
+                sino que su tipo se determinará en tiempo de ejecución según el tipo
+                del valor al que se asigne, y el tipo de esta variable puede cambiar si se
+                le asigna un valor de otro tipo.</p>
+            <h3>Fuertemente tipado</h3>
+            <p>No se permite tratar a una variable como si fuera de un tipo distinto
+                al que tiene, es necesario convertir de forma explícita dicha variable
+                al nuevo tipo previamente. Por ejemplo, si tenemos una variable que
+                contiene un texto (variable de tipo cadena o string) no podremos tratarla como un número (sumar la
+                cadena “9” y el
+                número 8). En otros
+                lenguajes el tipo de la variable cambiaría para adaptarse al comportamiento esperado, aunque esto es más
+                propenso a
+                errores.</p>
+            <h3>Multiplataforma</h3>
+            <p>El intérprete de Python está disponible en multitud de plataformas
+                (UNIX, Solaris, Linux, DOS, Windows, OS/2, Mac OS, etc.) por lo
+                que si no utilizamos librerías específicas de cada plataforma nuestro
+                programa podrá correr en todos estos sistemas sin grandes cambios.</p>
+            <h3>Orientado a objetos</h3>
+            <p>La orientación a objetos es un paradigma de programación en el que
+                los conceptos del mundo real relevantes para nuestro problema se trasladan a clases y objetos en nuestro
+                programa. La
+                ejecución del programa consiste en una serie de interacciones entre los objetos.</p>
+            <p>Python también permite la programación imperativa, programación
+                funcional y programación orientada a aspectos</p>
+            <p>En conclusion Python es un lenguaje que todo el mundo debería conocer. Su sintaxis
+                simple, clara y sencilla; el tipado dinámico, el gestor de memoria, la
+                gran cantidad de librerías disponibles y la potencia del lenguaje, entre
+                otros, hacen que desarrollar una aplicación en Python sea sencillo, muy
+                rápido y, lo que es más importante, divertido.</p>
+        </section>
+        <section id="hello_world" class="main-section">
+            <header>Hello world</header>
+            <p>El primer programa que vamos a escribir en Python es el clásico Hola
+                Mundo, y en este lenguaje es tan simple como:</p>
+            <code>
+                print (“Hola Mundo”)
+            </code>
+        </section>
+        <section id="tipos_basicos" class="main-section">
+            <header>Tipos Basicos</header>
+            <p>En Python los tipos básicos se dividen en:</p>
+            <ul>
+                <li>Números, como pueden ser 3 (entero), 15.57 (de coma flotante) o
+                    7 + 5j (complejos)</li>
+                <li>Cadenas de texto, como “Hola Mundo”</li>
+                <li>Valores booleanos: True (cierto) y False (falso).</li>
+            </ul>
+            <p>Vamos a crear un par de variables a modo de ejemplo. Una de tipo
+                cadena y una de tipo entero:</p>
+            <code>
+                # esto es una cadena <br>
+                c = “Hola Mundo”<br>
+                # y esto es un entero<br>
+                e = 23<br>
+                # podemos comprobarlo con la función type<br>
+                type(c)<br>
+                type(e)<br>
+            </code>
+            <p>Como veis en Python, a diferencia de muchos otros lenguajes, no se
+                declara el tipo de la variable al crearla. En Java, por ejemplo, escribiríamos:</p>
+            <code>
+            String c = “Hola Mundo”;
+            int e = 23;
+            </code>
+            <p>Este pequeño ejemplo también nos ha servido para presentar los
+                comentarios inline en Python: cadenas de texto que comienzan con el
+                carácter # y que Python ignora totalmente. Hay más tipos de comentarios, de los que hablaremos más
+                adelante.</p>
+            <h3>Enteros</h3>
+            <p>Los números enteros son aquellos números positivos o negativos que
+                no tienen decimales (además del cero). En Python se pueden representar mediante el tipo int (de integer,
+                entero) o el
+                tipo long (largo).
+                La única diferencia es que el tipo long permite almacenar números
+                más grandes. Es aconsejable no utilizar el tipo long a menos que sea
+                necesario, para no malgastar memoria.</p>
+            <p>El tipo int de Python se implementa a bajo nivel mediante un tipo
+                long de C. Y dado que Python utiliza C por debajo, como C, y a diferencia de Java, el rango de los
+                valores que puede
+                representar depende
+                de la plataforma</p>
+            <p>En la mayor parte de las máquinas el long de C se almacena utilizando
+                32 bits, es decir, mediante el uso de una variable de tipo int de Python
+                podemos almacenar números de -231 a 231 - 1, o lo que es lo mismo, de
+                -2.147.483.648 a 2.147.483.647. En plataformas de 64 bits, el rango es
+                de -9.223.372.036.854.775.808 hasta 9.223.372.036.854.775.807.</p>
+            <p>El tipo long de Python permite almacenar números de cualquier precisión, estando limitados solo por la
+                memoria
+                disponible en la máquina.</p>
+            <p>Al asignar un número a una variable esta pasará a tener tipo int, a
+                menos que el número sea tan grande como para requerir el uso del tipo
+                long.</p>
+            <code>
+                    # type(entero) devolvería int <br>
+                    entero = 23
+                </code>
+            <p>También podemos indicar a Python que un número se almacene usando long añadiendo una L al final:</p>
+            <code>
+                    # type(entero) devolvería long <br>
+                    entero = 23L
+                </code>
+            <p>El literal que se asigna a la variable también se puede expresar como
+                un octal, anteponiendo un cero:</p>
+            <code>
+                    # 027 octal = 23 en base 10 <br>
+                    entero = 027
+                </code>
+            <p>o bien en hexadecimal, anteponiendo un 0x:</p>
+            <code>
+                    # 0×17 hexadecimal = 23 en base 10 <br>
+                    entero = 0×17
+                </code>
+            <h3>Reales</h3>
+            <p>Los números reales son los que tienen decimales. En Python se expresan mediante el tipo float. En otros
+                lenguajes de
+                programación, como
+                C, tenemos también el tipo double, similar a float pero de mayor
+                precisión (double = doble precisión). Python, sin embargo, implementa
+                su tipo float a bajo nivel mediante una variable de tipo double de C,
+                es decir, utilizando 64 bits, luego en Python siempre se utiliza doble
+                precisión, y en concreto se sigue el estándar IEEE 754: 1 bit para el
+                signo, 11 para el exponente, y 52 para la mantisa. Esto significa que los
+                valores que podemos representar van desde ±2,2250738585072020 x
+                10-308 hasta ±1,7976931348623157×10^308.</p>
+            <p>La mayor parte de los lenguajes de programación siguen el mismo
+                esquema para la representación interna. Pero como muchos sabréis
+                esta tiene sus limitaciones, impuestas por el hardware. Por eso desde
+                Python 2.4 contamos también con un nuevo tipo Decimal, para el
+                caso de que se necesite representar fracciones de forma más precisa.
+                Sin embargo este tipo está fuera del alcance de este tutorial, y sólo es
+                necesario para el ámbito de la programación científica y otros relacionados. Para aplicaciones normales
+                podeis utilizar
+                el tipo float sin
+                miedo, como ha venido haciéndose desde hace años, aunque teniendo
+                en cuenta que los números en coma flotante no son precisos (ni en este
+                ni en otros lenguajes de programación).</p>
+            <p>Para representar un número real en Python se escribe primero la parte
+                entera, seguido de un punto y por último la parte decimal.</p>
+            <code>
+                real = 0.2703
+                </code>
+            <p>También se puede utilizar notación científica, y añadir una e (de exponente) para indicar un exponente en
+                base 10. Por
+                ejemplo:</p>
+            <code>
+                    real = 0.1e-3
+                </code>
+            <p>sería equivalente a 0.1 x 10-3 = 0.1 x 0.001 = 0.0001</p>
+            <h3>Complejos</h3>
+            <p>Los números complejos son aquellos que tienen parte imaginaria. Si
+                no conocías de su existencia, es más que probable que nunca lo vayas a
+                necesitar, por lo que puedes saltarte este apartado tranquilamente. De
+                hecho la mayor parte de lenguajes de programación carecen de este
+                tipo, aunque sea muy utilizado por ingenieros y científicos en general.</p>
+            <p>En el caso de que necesitéis utilizar números complejos, o simplemente tengáis curiosidad, os diré que
+                este tipo,
+                llamado complex en Python,
+                también se almacena usando coma flotante, debido a que estos números son una extensión de los números
+                reales. En
+                concreto se almacena
+                en una estructura de C, compuesta por dos variables de tipo double,
+                sirviendo una de ellas para almacenar la parte real y la otra para la
+                parte imaginaria</p>
+            <p>Los números complejos en Python se representan de la siguiente
+                forma:</p>
+            <code>
+                    complejo = 2.1 + 7.8j
+                </code>
+        </section>
+        <section id="operadores" class="main-section">
+            <header>Operadores</header>
+            <p>Veamos ahora qué podemos hacer con nuestros números usando los
+                operadores por defecto. Para operaciones más complejas podemos
+                recurrir al módulo math.</p>
+            <h3>Operadores Aritmeticos</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="row">+</th>
+                        <td>Suma</td>
+                        <td>r = 3 + 2 &nbsp;&nbsp;&nbsp; # r es 5</td>
+                    </tr>
+                    <tr>
+                        <th class="row">-</th>
+                        <td>Resta</td>
+                        <td>r = 4 - 7 &nbsp;&nbsp;&nbsp; # r es -3</td>
+                    </tr>
+                    <tr>
+                        <th class="row">-</th>
+                        <td>Negación</td>
+                        <td>r=-7 &nbsp;&nbsp;&nbsp;# r es -7</td>
+                    </tr>
+                    <tr>
+                        <th class="row">*</th>
+                        <td>Multiplicación</td>
+                        <td>r = 2 * 6 &nbsp;&nbsp;&nbsp;# r es 12</td>
+                    </tr>
+                    <tr>
+                        <th class="row">**</th>
+                        <td>Exponente</td>
+                        <td>r = 2 ** 6 &nbsp;&nbsp;&nbsp;# r es 64</td>
+                    </tr>
+                    <tr>
+                        <th class="row">/</th>
+                        <td>División</td>
+                        <td>r = 3.5 / 2 &nbsp;&nbsp;&nbsp;# r es 1.75</td>
+                    </tr>
+                    <tr>
+                        <th class="row">//</th>
+                        <td>División entera</td>
+                        <td>r = 3.5 // 2 &nbsp;&nbsp;&nbsp;# r es 1.0</td>
+                    </tr>
+                    <tr>
+                        <th class="row">%</th>
+                        <td>Módulo</td>
+                        <td>r = 7 % 2 &nbsp;&nbsp;&nbsp;# r es 1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <p>Puede que tengáis dudas sobre cómo funciona el operador de módulo,
+                y cuál es la diferencia entre división y división entera.</p>
+            <p>El operador de módulo no hace otra cosa que devolvernos el resto de
+                la división entre los dos operandos. En el ejemplo, 7/2 sería 3, con 1 de
+                resto, luego el módulo es 1.</p>
+            <p>La diferencia entre división y división entera no es otra que la que
+                indica su nombre. En la división el resultado que se devuelve es un
+                número real, mientras que en la división entera el resultado que se
+                devuelve es solo la parte entera.</p>
+            <p>No obstante hay que tener en cuenta que si utilizamos dos operandos
+                enteros, Python determinará que queremos que la variable resultado
+                también sea un entero, por lo que el resultado de, por ejemplo, 3 / 2 y
+                3 // 2 sería el mismo: 1.</p>
+            <p>Si quisiéramos obtener los decimales necesitaríamos que al menos uno
+                de los operandos fuera un número real, bien indicando los decimales</p>
+            <code>
+                r = 3.0 / 2
+            </code>
+            <p>o bien utilizando la función float (no es necesario que sepais lo que
+                significa el término función, ni que recordeis esta forma, lo veremos un
+                poco más adelante):
+            </p>
+            <code>
+                r = float(3) / 2
+            </code>
+            <p>Esto es así porque cuando se mezclan tipos de números, Python con-
+                Python para todos
+                20
+                vierte todos los operandos al tipo más complejo de entre los tipos de
+                los operandos
+            </p>
+            <h3>Operadores a nivel de bit</h3>
+            <p>Si no conocéis estos operadores es poco probable que vayáis a necesitarlos, por lo que podéis obviar esta
+                parte. Si aún
+                así tenéis curiosidad
+                os diré que estos son operadores que actúan sobre las representaciones
+                en binario de los operandos.</p>
+            <p>Por ejemplo, si veis una operación como 3 & 2, lo que estais viendo es
+                un and bit a bit entre los números binarios 11 y 10 (las representaciones en binario de 3 y 2).</p>
+            <p>El operador and (&), del inglés “y”, devuelve 1 si el primer bit operando
+                es 1 y el segundo bit operando es 1. Se devuelve 0 en caso contrario.</p>
+            <p>El resultado de aplicar and bit a bit a 11 y 10 sería entonces el número
+                binario 10, o lo que es lo mismo, 2 en decimal (el primer dígito es 1
+                para ambas cifras, mientras que el segundo es 1 sólo para una de ellas).</p>
+            <p>El operador or (|), del inglés “o”, devuelve 1 si el primer operando es 1
+                o el segundo operando es 1. Para el resto de casos se devuelve 0.</p>
+            <p>El operador xor u or exclusivo (^) devuelve 1 si uno de los operandos
+                es 1 y el otro no lo es</p>
+            <p>El operador not (~), del inglés “no”, sirve para negar uno a uno cada
+                bit; es decir, si el operando es 0, cambia a 1 y si es 1, cambia a 0.</p>
+            <p>Por último los operadores de desplazamiento (<< y>>) sirven para
+                    desplazar los bits n posiciones hacia la izquierda o la derecha.</p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="row">&</th>
+                        <td>and</td>
+                        <td>r = 3 & 2 &nbsp;&nbsp;&nbsp; # r es 2</td>
+                    </tr>
+                    <tr>
+                        <th class="row">|</th>
+                        <td>or</td>
+                        <td>r = 3 | 2 &nbsp;&nbsp;&nbsp; # r es 3</td>
+                    </tr>
+                    <tr>
+                        <th class="row">^</th>
+                        <td>xor</td>
+                        <td>r = 3 ^ 2 &nbsp;&nbsp;&nbsp;# r es 1</td>
+                    </tr>
+                    <tr>
+                        <th class="row">~</th>
+                        <td>not</td>
+                        <td>r = ~3 &nbsp;&nbsp;&nbsp;# r es -4</td>
+                    </tr>
+                    <tr>
+                        <th class="row">
+                            << </th>
+                        <td>Desplazamiento izq.</td>
+                        <td>. r = 3 << 1 &nbsp;&nbsp;&nbsp; # r es 6</td>
+                    </tr>
+                    <tr>
+                        <th class="row">>></th>
+                        <td>Desplazamiento der.</td>
+                        <td>r = 3 >> 1 &nbsp;&nbsp;&nbsp;# r es 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="cadenas" class="main-section">
+            <header>Cadenas</header>
+            <p>Las cadenas no son más que texto encerrado entre comillas simples
+                (‘cadena’) o dobles (“cadena”). Dentro de las comillas se pueden
+                añadir caracteres especiales escapándolos con \, como \n, el carácter de
+                nueva línea, o \t, el de tabulación.</p>
+            <p>Una cadena puede estar precedida por el carácter u o el carácter r, los
+                cuales indican, respectivamente, que se trata de una cadena que utiliza
+                codificación Unicode y una cadena raw (del inglés, cruda). Las cadenas raw se distinguen de las normales
+                en que los
+                caracteres escapados
+                mediante la barra invertida (\) no se sustituyen por sus contrapartidas.
+                Esto es especialmente útil, por ejemplo, para las expresiones regulares,
+                como veremos en el capítulo correspondiente.Una cadena puede estar precedida por el carácter u o el
+                carácter r, los
+                cuales indican, respectivamente, que se trata de una cadena que utiliza
+                codificación Unicode y una cadena raw (del inglés, cruda). Las cadenas raw se distinguen de las normales
+                en que los
+                caracteres escapados
+                mediante la barra invertida (\) no se sustituyen por sus contrapartidas.
+                Esto es especialmente útil, por ejemplo, para las expresiones regulares,
+                como veremos en el capítulo correspondiente.</p>
+            <code>
+                unicode = u”äóè”
+                raw = r”\n”
+
+            </code>
+            <p>También es posible encerrar una cadena entre triples comillas (simples
+                o dobles). De esta forma podremos escribir el texto en varias líneas, y
+                al imprimir la cadena, se respetarán los saltos de línea que introdujimos
+                sin tener que recurrir al carácter \n, así como las comillas sin tener que
+                escaparlas.</p>
+            <code>
+                triple = “““primera linea
+                esto se vera en otra linea”””
+            </code>
+            <p>Las cadenas también admiten operadores como +, que funciona realizando una concatenación de las cadenas
+                utilizadas como
+                operandos y
+                *, en la que se repite la cadena tantas veces como lo indique el número
+                utilizado como segundo operando.</p>
+            <code>
+                a = “uno” <br>
+                b = “dos” <br>
+                c = a + b # c es “unodos” <br>
+                c = a * 3 # c es “unounouno” <br>
+            </code>
+        </section>
+        <section id="booleanos" class="main-section">
+            <header>Booleanos</header>
+            <p>Como decíamos al comienzo del capítulo una variable de tipo booleano sólo puede tener dos valores: True
+                (cierto) y False
+                (falso). Estos
+                valores son especialmente importantes para las expresiones condicionales y los bucles, como veremos más
+                adelante.</p>
+            <p>En realidad el tipo bool (el tipo de los booleanos) es una subclase del
+                tipo int. Puede que esto no tenga mucho sentido para tí si no conoces
+                los términos de la orientación a objetos, que veremos más adelante,
+                aunque tampoco es nada importante.</p>
+            <p>Estos son los distintos tipos de operadores con los que podemos trabajar con valores booleanos, los
+                llamados operadores
+                lógicos o condicionales:</p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="row">and</th>
+                        <td>¿se cumple a y b?</td>
+                        <td>r = True and False &nbsp;&nbsp;&nbsp; # r es
+                            False</td>
+                    </tr>
+                    <tr>
+                        <th class="row">or</th>
+                        <td>¿se cumple a o b?</td>
+                        <td>r = True or False # r es
+                            True</td>
+                    </tr>
+                    <tr>
+                        <th class="row">not</th>
+                        <td>No a</td>
+                        <td>r = not True # r es
+                            False</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Los valores booleanos son además el resultado de expresiones que
+                utilizan operadores relacionales (comparaciones entre valores):</p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="row">==</th>
+                        <td>¿son iguales a y b?</td>
+                        <td>r = 5 == 3 # r es
+                            False</td>
+                    </tr>
+                    <tr>
+                        <th class="row">!=</th>
+                        <td>¿son distintos a y b?</td>
+                        <td>r = 5 != 3 # r es
+                            True</td>
+                    </tr>
+                    <tr>
+                        <th class="row">
+                            < </th>
+                        <td>¿es a menor que b?</td>
+                        <td>r = 5 < 3 # r es False</td>
+                    </tr>
+                    <tr>
+                        <th class="row">></th>
+                        <td>¿es a mayor que b?</td>
+                        <td>r = 5 > 3 # r es
+                            True</td>
+                    </tr>
+                    <tr>
+                        <th class="row">
+                            <= </th>
+                        <td>¿es a menor o igual que b?</td>
+                        <td>r = 5 <= 5 # r es True</td>
+                    </tr>
+                    <tr>
+                        <th class="row">>=</th>
+                        <td>¿es a mayor o igual que b?</td>
+                        <td>r = 5 >= 3 # r es
+                            True</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            <p>creditos: Raúl González Duque</p>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
